@@ -157,12 +157,12 @@
     --color-neutral-550           : #565958;
     --color-neutral-600           : #4c4f4e;
     --color-neutral-650           : #434545;
-    --color-neutral-700           : #393b3b;
-    --color-neutral-750           : #303231;
-    --color-neutral-800           : #262827;
-    --color-neutral-850           : #1c1e1d;
-    --color-neutral-900           : #131414;
-    --color-neutral-950           : #090a0a;
+    --color-neutral-700           : #5c3f1f;
+    --color-neutral-750           : #4f361a;
+    --color-neutral-800           : #4a3318;
+    --color-neutral-850           : #3d2914;
+    --color-neutral-900           : #2d1f0f;
+    --color-neutral-950           : #1f150a;
     --color-neutral               : var(--color-neutral-500);
 
     --color-white                 : var(--color-neutral-50);
@@ -4464,6 +4464,10 @@ td:last-child {
     margin        : 0;
     vertical-align: bottom;
     transition    : all, 0.6s var(--ease-smooth);
+    width         : 100%;
+    height        : 300px;
+    object-fit    : cover;
+    object-position: center;
 }
 
 /* on hover
@@ -4494,17 +4498,26 @@ td:last-child {
     .gallery-items {
         --col-min-width: 230px;
     }
+    .gallery-items__item-thumb img {
+        height: 250px;
+    }
 }
 
 @media screen and (max-width: 1000px) {
     .gallery-items {
         --col-min-width: 180px;
     }
+    .gallery-items__item-thumb img {
+        height: 220px;
+    }
 }
 
 @media screen and (max-width: 600px) {
     .gallery-items {
         --col-min-width: 50%;
+    }
+    .gallery-items__item-thumb img {
+        height: 200px;
     }
 }
 
