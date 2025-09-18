@@ -3210,7 +3210,7 @@ td:last-child {
  * ------------------------------------------------------------------- */
 .s-header {
     --header-height : 7.2rem;
-    --logo-width    : 10.8rem;
+    --logo-width    : 14rem;
 
     z-index         : 100;
     background-color: transparent;
@@ -3555,7 +3555,7 @@ td:last-child {
 
 @media screen and (max-width: 400px) {
     .s-header {
-        --logo-width: 9.8rem;
+        --logo-width: 12rem;
     }
 }
 
@@ -4023,7 +4023,8 @@ td:last-child {
  * ## about content
  * -------------------------------------------------------------------- */
 .about-pic-primary {
-    width: 100%;
+    width: 120%;
+    max-width: 500px;
 }
 
 .about-pic-primary img {
@@ -4053,7 +4054,8 @@ td:last-child {
     }
 
     .s-about__content-start .about-pic-primary {
-        width: 50%;
+        width: 60%;
+        max-width: 400px;
     }
 
     .s-about__content-end {
