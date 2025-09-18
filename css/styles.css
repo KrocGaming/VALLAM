@@ -92,6 +92,7 @@
  * ## font families
  * ------------------------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
 
 :root {    
    /* font-families
@@ -3024,18 +3025,7 @@ td:last-child {
     font-size : clamp(var(--text-display), var(--text-display) - 1rem + 2vw, var(--text-huge));
 }
 
-.section-header::before {
-    display       : block;
-    content       : attr(data-num) ".";
-    font-family   : var(--type-headings);
-    font-weight   : 400;
-    font-size     : var(--text-md);
-    letter-spacing: -0.02em;
-    line-height   : 1;
-    color         : var(--color-text-light);
-    margin-left   : 0.4em;
-    margin-bottom : -0.4em;
-}
+/* .section-header::before rule removed - no longer needed without data-num attributes */
 
 /* ------------------------------------------------------------------- 
  * ## social list
@@ -3294,6 +3284,35 @@ td:last-child {
     width         : var(--logo-width);
     margin        : 0;
     vertical-align: bottom;
+}
+
+/* header social icons */
+.header-social {
+    display: flex;
+    gap: 0.8rem;
+    margin-left: 1rem;
+    align-items: center;
+}
+
+.header-social__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.header-social__link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.header-contact {
+    display: flex;
+    align-items: center;
 }
 
 /* --------------------------------------------------------------------
@@ -3571,9 +3590,31 @@ td:last-child {
     --content-min-height    : calc(var(--vspace-1) * 27);
 
     z-index                 : 2;
-    height                  : max(var(--content-min-height), 100vh);
+    height                  : 100vh;
+    width                   : 100vw;
     overflow                : hidden;
     position                : relative;
+    background-image        : url('../images/intro1.png');
+    background-size         : cover;
+    background-position     : center center;
+    background-repeat       : no-repeat;
+    background-attachment   : fixed;
+}
+
+.s-intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.40);
+    z-index: 1;
+}
+
+.s-intro__content {
+    position: relative;
+    z-index: 3;
 }
 
 /* --------------------------------------------------------------------
@@ -3601,9 +3642,9 @@ td:last-child {
 
 .intro-header__overline {
     font-family   : var(--type-headings);
-    font-weight   : 400;
-    font-style    : italic;
-    font-size     : var(--text-lg);
+    font-weight   : 600;
+    font-style    : normal;
+    font-size     : var(--text-2xl);
     line-height   : 1;
     letter-spacing: -0.02em;
     color         : var(--color-text);
@@ -3625,9 +3666,12 @@ td:last-child {
 }
 
 .intro-header__big-type {
-    font-size  : clamp(var(--text-display), var(--text-3xl) + 10vw, 18.4rem);
-    line-height: 1;
-    margin-top : 0;
+    font-family: var(--type-headings);
+    font-weight: 500;
+    font-size  : clamp(var(--text-xl), var(--text-2xl) + 4vw, 6rem);
+    line-height: 1.2;
+    margin-top : var(--vspace-1);
+    font-style : italic;
 }
 
 .intro-pic-primary {
@@ -4113,7 +4157,7 @@ td:last-child {
     flex-direction: column;
     margin-left   : 0;
     border-top    : 1px solid var(--color-border);
-    counter-reset : ctr;
+    /* counter-reset : ctr; - removed for clean menu tabs */
 }
 
 .tab-nav__list li {
@@ -4155,14 +4199,7 @@ td:last-child {
     padding-right : var(--vspace-0_75);
 }
 
-.tab-nav__list a::before {
-    display          : block;
-    content          : counter(ctr, decimal-leading-zero) ".";
-    font-size        : var(--text-xs);
-    margin-right     : var(--vspace-0_625);
-    color            : var(--color-text-light);
-    counter-increment: ctr;
-}
+/* .tab-nav__list a::before rule removed - no numbering needed for menu tabs */
 
 .tab-nav__list a svg {
     height                    : var(--vspace-0_5);
@@ -4238,6 +4275,8 @@ td:last-child {
     padding-left : var(--vspace-1);
     color        : var(--color-text);
     position     : relative;
+    font-size    : var(--text-lg);
+    font-weight  : 600;
 }
 
 .menu-block__cat-name::before {
