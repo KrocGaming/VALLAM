@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 
 /* =================================================================== 
  * Lounge Main Stylesheet
@@ -3649,10 +3650,10 @@ td:last-child {
 }
 
 .intro-header__overline {
-    font-family   : 'Samarkan', var(--type-headings);
+    font-family   : var(--type-headings);
     font-weight   : 700;
     font-style    : normal;
-    font-size     : clamp(8rem, 18vw, 20rem);
+    font-size     : clamp(5rem, 12vw, 14rem);
     line-height   : 1;
     letter-spacing: -0.02em;
     color         : white;
@@ -3668,9 +3669,9 @@ td:last-child {
 }
 
 .intro-header__big-type {
-    font-family: cursive;
+    font-family: 'Parisienne', cursive;
     font-weight: 300;
-    font-size  : clamp(1.2rem, 4vw, 2.2rem);
+    font-size  : clamp(1.6rem, 6vw, 3rem);
     line-height: 1.4;
     margin-top : 0;
     font-style : italic;
