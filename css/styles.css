@@ -3379,6 +3379,10 @@ td:last-child {
 
 .header-contact .btn {
     margin: 0 0 var(--vspace-0_125) 0;
+    --btn-text-size: var(--text-xs);
+    --btn-padding: var(--vspace-0_375);
+    font-size: var(--btn-text-size);
+    padding: calc(var(--btn-padding) - 1px) calc((var(--btn-padding) * 1.5) - 1px);
 }
 
 /* --------------------------------------------------------------------
@@ -3640,7 +3644,7 @@ td:last-child {
 
     z-index         : 2;
     grid-column     : 1/-1;
-    padding-top     : var(--vspace-1);
+    padding-top     : var(--vspace-4);
     position        : relative;
     text-align      : center;
     display         : flex;
@@ -3653,7 +3657,7 @@ td:last-child {
     font-family   : var(--type-headings);
     font-weight   : 700;
     font-style    : normal;
-    font-size     : clamp(5rem, 12vw, 14rem);
+    font-size     : clamp(3rem, 8vw, 10rem);
     line-height   : 1;
     letter-spacing: -0.02em;
     color         : white;
@@ -3671,7 +3675,7 @@ td:last-child {
 .intro-header__big-type {
     font-family: 'Parisienne', cursive;
     font-weight: 300;
-    font-size  : clamp(1.6rem, 6vw, 3rem);
+    font-size  : clamp(2rem, 8vw, 4rem);
     line-height: 1.4;
     margin-top : 0;
     font-style : italic;
@@ -4017,17 +4021,17 @@ td:last-child {
 
 @media screen and (max-width: 500px) {
     .s-intro {
-        --content-padding-top: max(12.8rem, 12vh);
+        --content-padding-top: max(20rem, 25vh);
         min-height: 90vh;
     }
 
     .intro-header__overline {
-        font-size: clamp(3rem, 10vw, 8rem);
+        font-size: clamp(3.5rem, 12vw, 7rem);
         margin-bottom: var(--vspace-0_125);
     }
 
     .intro-header__big-type {
-        font-size: clamp(0.8rem, 2.5vw, 1.4rem);
+        font-size: clamp(1.3rem, 4.5vw, 2.2rem);
     }
 
     .intro-pic-primary {
@@ -4070,17 +4074,17 @@ td:last-child {
         overflow-x: hidden;
     }
     .intro-header__overline {
-        font-size: clamp(3.5rem, 11vw, 9rem);
+        font-size: clamp(4rem, 14vw, 8rem);
         line-height: 0.9;
     }
 
     .intro-header__big-type {
-        font-size: clamp(0.85rem, 2.8vw, 1.5rem);
+        font-size: clamp(1.4rem, 5vw, 2.5rem);
         line-height: 1.3;
     }
 
     .intro-header {
-        padding-top: var(--vspace-0_5);
+        padding-top: var(--vspace-4);
     }
 }
 
@@ -4090,16 +4094,21 @@ td:last-child {
     }
 
     .intro-header__overline {
-        font-size: clamp(2.5rem, 9vw, 6rem);
+        font-size: clamp(3rem, 12vw, 7rem);
         line-height: 0.8;
     }
 
     .intro-header__big-type {
-        font-size: clamp(0.7rem, 2.2vw, 1.2rem);
+        font-size: clamp(1.2rem, 4vw, 2rem);
     }
 
     .s-intro {
         min-height: 80vh;
+        --content-padding-top: max(18rem, 22vh);
+    }
+
+    .intro-header {
+        padding-top: var(--vspace-5);
     }
 }
 
