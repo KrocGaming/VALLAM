@@ -3645,10 +3645,10 @@ td:last-child {
 }
 
 .intro-header__overline {
-    font-family   : var(--type-headings);
+    font-family   : 'Samarkan', var(--type-headings);
     font-weight   : 700;
     font-style    : normal;
-    font-size     : clamp(6rem, 15vw, 16rem);
+    font-size     : clamp(8rem, 18vw, 20rem);
     line-height   : 1;
     letter-spacing: -0.02em;
     color         : white;
