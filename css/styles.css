@@ -3644,7 +3644,8 @@ td:last-child {
 
     z-index         : 2;
     grid-column     : 1/-1;
-    padding-top     : var(--vspace-4);
+    padding-top     : 0;
+    margin-top      : -2rem;
     position        : relative;
     text-align      : center;
     display         : flex;
@@ -3657,7 +3658,7 @@ td:last-child {
     font-family   : var(--type-headings);
     font-weight   : 700;
     font-style    : normal;
-    font-size     : clamp(3rem, 8vw, 10rem);
+    font-size     : clamp(2.5rem, 6vw, 7rem);
     line-height   : 1;
     letter-spacing: -0.02em;
     color         : white;
@@ -3673,7 +3674,7 @@ td:last-child {
 }
 
 .intro-header__big-type {
-    font-family: 'Parisienne', cursive;
+    font-family: 'Imperial Script', cursive;
     font-weight: 300;
     font-size  : clamp(2rem, 8vw, 4rem);
     line-height: 1.4;
@@ -4023,6 +4024,7 @@ td:last-child {
     .s-intro {
         --content-padding-top: max(20rem, 25vh);
         min-height: 90vh;
+        background-position: 90% center;
     }
 
     .intro-header__overline {
@@ -4066,6 +4068,7 @@ td:last-child {
         max-width: 100%;
         overflow-x: hidden;
         position: relative;
+        background-position: 85% center;
     }
 
     .s-intro__content {
@@ -4105,6 +4108,7 @@ td:last-child {
     .s-intro {
         min-height: 80vh;
         --content-padding-top: max(18rem, 22vh);
+        background-position: 95% center;
     }
 
     .intro-header {
