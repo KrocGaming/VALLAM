@@ -4067,6 +4067,7 @@ td:last-child {
         max-width: 100%;
         overflow-x: hidden;
         position: relative;
+        background-position: 90% center;
     }
 
     .s-intro__content {
