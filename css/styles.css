@@ -4024,7 +4024,6 @@ td:last-child {
     .s-intro {
         --content-padding-top: max(20rem, 25vh);
         min-height: 90vh;
-        background-position: 90% center;
     }
 
     .intro-header__overline {
@@ -4068,7 +4067,6 @@ td:last-child {
         max-width: 100%;
         overflow-x: hidden;
         position: relative;
-        background-position: 85% center;
     }
 
     .s-intro__content {
@@ -4108,7 +4106,6 @@ td:last-child {
     .s-intro {
         min-height: 80vh;
         --content-padding-top: max(18rem, 22vh);
-        background-position: 95% center;
     }
 
     .intro-header {
